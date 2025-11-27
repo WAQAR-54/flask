@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Glowing UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<div class="shell">
+  <div class="card">
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link active">About</a>
+    </div>
+
+    <div class="pill">
+      <span class="pill-dot"></span>
+      ABOUT · GLOW MODE
+    </div>
+
+    <div class="header-row">
+      <div class="title-block">
+        <h1>About This Project</h1>
+        <p>A modern neon-glow UI built using Flask + HTML + CSS.</p>
+      </div>
+
+      <div class="badge-stack">
+        <div class="small-badge">
+          Version: <span>1.0</span>
+        </div>
+        <div class="small-badge">
+          UI Type: Neon · Glassmorphism
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <div class="section">
+          <div class="section-title">What is this?</div>
+          <div class="section-main">
+            This glowing theme is designed for dashboards, landing pages,  
+            control panels and modern UIs.  
+            <br><br>
+            You can extend this to:
+            <br>✔ Leave Management  
+            ✔ Employee Portal  
+            ✔ Admin Dashboard  
+            ✔ Ecommerce Panel  
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section">
+          <div class="section-title">Navigation</div>
+          <div class="section-main">
+            You can always return to the home page using the navigation above.
+            <br><br>
+            <button class="btn-primary" onclick="location.href='/'">Back to Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

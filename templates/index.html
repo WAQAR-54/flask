@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask App · Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-brand">FlaskApp</div>
+
+    <nav class="nav-links">
+        <a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a>
+        <a href="/about" class="nav-link {% if request.path == '/about' %}active{% endif %}">About</a>
+        <a href="/users" class="nav-link {% if request.path == '/users' %}active{% endif %}">Users</a>
+    </nav>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+    <section class="hero-card">
+        <h1 class="hero-title">Welcome to your Flask Playground</h1>
+        <p class="hero-subtitle">
+            A minimal setup to test routing, templates and database connections.
+            Start by creating a test user or viewing all users from the database.
+        </p>
+
+        <div class="hero-actions">
+            <a href="/create-test-user" class="btn">➕ Create Test User</a>
+            <a href="/users" class="btn btn-outline">👥 View All Users</a>
+        </div>
+    </section>
+
+    <section class="info-grid">
+        <div class="info-card">
+            <h2>Routing</h2>
+            <p>Use the navigation above to move between Home, About and Users pages.</p>
+        </div>
+        <div class="info-card">
+            <h2>Database</h2>
+            <p>Users are stored in the <code>users</code> table. You can insert rows directly from MySQL too.</p>
+        </div>
+        <div class="info-card">
+            <h2>Next Steps</h2>
+            <p>Add your own models, forms and pages on top of this basic skeleton.</p>
+        </div>
+    </section>
+
+</main>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
